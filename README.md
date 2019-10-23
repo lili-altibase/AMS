@@ -1,0 +1,2 @@
+# AMS
+Telegraf Altibase Plugin
