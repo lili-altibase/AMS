@@ -7,11 +7,12 @@ sh influxdbgrafana_redhat.run [--ipgrafana=IP] [--portgrafana=PORT] [--ipinfluxd
 
 ### b. Ubuntu
 sh influxdbgrafana_ubuntu.run [--ipgrafana=IP] [--portgrafana=PORT] [--ipinfluxdb=IP] [--portinfluxdb=PORT] [--help]
-
+```
 --ipgrafana=IP        If no --ipgrafana option is given, the default value is 127.0.0.1
 --portgrafana=PORT    If no --portgrafana option is given, the default value is 3000
 --ipinfluxdb=IP       If no --ipinfluxdb option is given, the default value is 127.0.0.1
 --portinfluxdb=PORT   If no --portinfluxdb option is given, the default value is 8086
+```
 
 ## 2. monitor하고 싶은 장비에서 telegraf 수행 합니다.
 telegraf -config telegraf.conf
