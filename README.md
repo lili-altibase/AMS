@@ -19,9 +19,13 @@ hostname = "nval02(receiver)"
 
 [[inputs.altibase]]
 altibase_dsn    = "Altiodbc"
+
 altibase_server = "127.0.0.1"
+
 altibase_port   = 43019
+
 altibase_user   = "sys"
+
 altibase_password = "manager"
 
 [[inputs.exec]]
@@ -32,15 +36,23 @@ altibase_password = "manager"
     
 ### b. test.go
 mysrv  = flag.String("mysrv", "127.0.0.1", "altibase server ip")
+
 mydb   = flag.String("mydb", "mydb", "altibase database name")
+
 myuser = flag.String("myuser", "sys", "altibase user name")
+
 mypass = flag.String("mypass", "manager", "altibase password")
+
 myport = flag.String("myport", "43019", "altibase port")
 
 ### c. altibase.go
 mysrv  = flag.String("mysrv", "127.0.0.1", "altibase server ip")
+
 mydb   = flag.String("mydb", "mydb", "altibase database name")
+
 myuser = flag.String("myuser", "sys", "altibase user name")
+
 mypass = flag.String("mypass", "manager", "altibase password")
+
 myport = flag.String("myport", "43019", "altibase port")
 
