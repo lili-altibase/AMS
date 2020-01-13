@@ -24,7 +24,7 @@ telegraf -config telegraf.conf
 hostname = "nval02(receiver)"
 
 [[inputs.altibase]]
-altibase_dsn    = "Altiodbc"
+altibase_dsn    = "Altiodbc" => 장비에서 미리 ODBC를 세팅 해야 합니다.
 
 altibase_server = "127.0.0.1"
 
