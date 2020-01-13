@@ -18,13 +18,15 @@ sh influxdbgrafana_ubuntu.run [--ipgrafana=IP] [--portgrafana=PORT] [--ipinfluxd
 telegraf -config telegraf.conf
 
 확인 해야 할 부분이 다음과 같습니다. influxdb uri, altibase uri,port 맞춰서 수정 하면 됩니다.
+장비에서 미리 ODBC를 세팅 해야 합니다. http://docs.altibase.com/pages/viewpage.action?pageId=11698380
+
 ### a. telegraf.conf
 [[outputs.influxdb]] urls = ["http://127.0.0.1:8086"]
 
 hostname = "nval02(receiver)"
 
 [[inputs.altibase]]
-altibase_dsn    = "Altiodbc" => 장비에서 미리 ODBC를 세팅 해야 합니다.
+altibase_dsn    = "Altiodbc" => ODBC세팅
 
 altibase_server = "127.0.0.1"
 
