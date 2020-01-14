@@ -17,3 +17,6 @@ do
 #echo ${i}
     curl -X POST http://''$grafanaip'':''$grafanaport''/api/dashboards/db --insecure -H "Authorization: Bearer ${apikey}" -H "Content-Type:application/json" -d @$i;
 done
+
+# install piechart
+grafana-cli plugins install grafana-piechart-panel
