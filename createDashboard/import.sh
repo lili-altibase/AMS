@@ -20,3 +20,6 @@ done
 
 # install piechart
 grafana-cli plugins install grafana-piechart-panel
+
+# restart server
+service grafana-server restart
