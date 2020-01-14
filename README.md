@@ -1,7 +1,7 @@
 # AMS
 System, altibase monitoring
 
-## 1.createDashboard
+## 1.createDashboard(root에서 수행)
 ### a. Redhat
 sh influxdbgrafana_redhat.run [--ipgrafana=IP] [--portgrafana=PORT] [--ipinfluxdb=IP] [--portinfluxdb=PORT] [--help]
 
