@@ -51,7 +51,8 @@ done
  
 #os ¹öû install, service start ¾ÈµÉ¼ö½4ϴÙ ±׷¸¸éö¸·Îinstall Ç¾ßÇ´ϴÙ
 # influxdb install 
-rpm -ivh influxdb-1.6.1.x86_64.rpm
+# rpm -ivh influxdb-1.6.1.x86_64.rpm
+rpm -ivh influxdb-1.7.9.x86_64.rpm
  
 # grafana install 
 rpm -ivh grafana-6.4.4-1.x86_64.rpm
