@@ -21,7 +21,7 @@ telegraf -config telegraf.conf
 장비에서 미리 ODBC를 세팅 해야 합니다. http://docs.altibase.com/pages/viewpage.action?pageId=11698380
 
 ### a. telegraf.conf
-[[outputs.influxdb]] urls = ["http://127.0.0.1:8086"]
+[[outputs.influxdb]] urls = ["http://127.0.0.1:8086"] =>http://ipinfluxdb:portinfluxdb
 
 hostname = "nval02(receiver)"
 
@@ -64,3 +64,5 @@ mypass = flag.String("mypass", "manager", "altibase password")
 
 myport = flag.String("myport", "43019", "altibase port")
 
+## 2. grafana 접속 합니다.
+http://ipgrafana:portgrafana
