@@ -64,5 +64,5 @@ mypass = flag.String("mypass", "manager", "altibase password")
 
 myport = flag.String("myport", "43019", "altibase port")
 
-## 2. grafana 접속 합니다.
+## 3. grafana 접속 합니다.
 http://ipgrafana:portgrafana
