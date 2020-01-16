@@ -2,6 +2,8 @@
 System, altibase monitoring
 
 ## 1.createDashboard(root에서 수행)
+수행하기전에 jq 세팅 하세요.  /usr/bin밑에서 저장하면 됩니다.
+
 ### a. Redhat
 sh influxdbgrafana_redhat.run [--ipgrafana=IP] [--portgrafana=PORT] [--ipinfluxdb=IP] [--portinfluxdb=PORT] [--help]
 
