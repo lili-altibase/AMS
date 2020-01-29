@@ -8,6 +8,12 @@ influxdbport=`echo $4`
 #create your datasource
 curl --user admin:admin 'http://'''$grafanaip''':'''$grafanaport'''/api/datasources' -X  POST -H 'Content-Type: application/json;charset=UTF-8' --data-binary '{"name":"InfluxDB","type":"influxdb","url":"http://'''${influxdbip}''':'''${influxdbport}'''","access":"proxy","database":"telegraf","isDefault":true,"basicAuth":false}'
 
+tmpapikey=`curl -s http://admin:admin@''$grafanaip'':''$grafanaport''/api/auth/keys | jq '.[]|.id'`
+#echo "tmpapikey=$tmpapikey"
+
+#delete API key
+curl -s -L -XDELETE -H "Content-Type: application/json" http://admin:admin@$grafanaip:$grafanaport/api/auth/keys/$tmpapikey
+
 #create API key
 apikey=`curl -X POST -H "Content-Type: application/json" -d '{"name":"apikeycurl", "role": "Admin"}' http://admin:admin@''$grafanaip'':''$grafanaport''/api/auth/keys | jq .key | tr -d '"'`
 

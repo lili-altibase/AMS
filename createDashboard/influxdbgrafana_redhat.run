@@ -49,7 +49,14 @@ while true; do
     esac
 done
  
-#os ¹öû install, service start ¾ÈµÉ¼ö½4ϴÙ ±׷¸¸éö¸·Îinstall Ç¾ßÇ´ϴÙ
+#influxdb, grafana uninstall
+service grafana-server stop
+service influxdb stop
+
+rpm -e influxdb
+rpm -e grafana
+
+#os ¹öû install, service start ¾ÈµkÉ¼ö½4ϴÙ ±׷¸¸éö¸·Îinstall Ç¾ßÇ´ϴÙ
 # influxdb install 
 # rpm -ivh influxdb-1.6.1.x86_64.rpm
 rpm -ivh influxdb-1.7.9.x86_64.rpm
