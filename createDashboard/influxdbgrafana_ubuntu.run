@@ -49,6 +49,13 @@ while true; do
     esac
 done
  
+#influxdb, grafana uninstall
+service grafana-server stop
+service influxdb stop
+
+dpkg -P influxdb
+dpkg -P grafana
+
 #os ¹öû install, service start ¾ÈµÉ¼ö½4ϴÙ ±׷¸¸éö¸·Îinstall Ç¾ßÇ´ϴÙ
 # influxdb install
 dpkg -i influxdb_1.7.9_amd64.deb
