@@ -53,16 +53,15 @@ done
 service grafana-server stop
 service influxdb stop
 
-rpm -e influxdb
-rpm -e grafana
+yum remove grafana
+yum remove influxdb
 
 #os ¹öû install, service start ¾ÈµkÉ¼ö½4ϴÙ ±׷¸¸éö¸·Îinstall Ç¾ßÇ´ϴÙ
 # influxdb install 
-# rpm -ivh influxdb-1.6.1.x86_64.rpm
-rpm -ivh influxdb-1.7.9.x86_64.rpm
+yum install influxdb-1.7.9.x86_64.rpm
  
 # grafana install 
-rpm -ivh grafana-6.4.4-1.x86_64.rpm
+yum install grafana-6.4.4-1.x86_64.rpm
  
 #start up
 service grafana-server start
